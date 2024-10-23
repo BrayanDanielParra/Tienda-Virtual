@@ -6,7 +6,9 @@
     <title>Mundo Tecnologico</title>
     <link rel="icon" href="img/logo3.ico">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 <body>
   <!-- Inicio del header -->
@@ -49,13 +51,23 @@
           <button class="btn btn btn-outline-primary" type="submit">Buscar</button>
           
         </form>
-        </button>
-
       
-      </div>
+      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+        <i class="bi bi-cart-fill"></i>
+    </button>
     </div>
   </nav>
-    
+  <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="staticBackdropLabel">Carrito de Compras</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul id="lista-carrito">
+            <li>No hay productos en el carrito.</li>
+        </ul>
+    </div>
+</div>
       <!-- Inicio de card -->
       <div>
             <img src="./img/Procesadores (CPUs).png" alt="" width="300px">
@@ -72,7 +84,14 @@
                       Producto de alto rendimiento y línea exclusiva para profesionales que ejecutan muchos programas al mismo tiempo.</p>
                   </div>
                   <div class="card-footer">
-                    <small class="text-body-secondary">Last updated 3 mins ago</small>
+                    <div class="product">
+                      
+                      <div id="productos">
+                        
+                        <button onclick="agregarProducto(1, 'Procesador Intel Core I5 14600kf 3.5 Ghz 14 Core 24 Mb 1700', 256)" class="btn btn-primary">Agregar Producto</button>
+                        
+                    </div>
+                  </div>
                   </div>
                 </div>
               </div>
@@ -85,7 +104,11 @@
                 Producto de alto rendimiento y línea exclusiva para profesionales que ejecutan muchos programas al mismo tiempo.</p>
             </div>
             <div class="card-footer">
-              <small class="text-body-secondary">Last updated 3 mins ago</small>
+              <div id="productos">
+                        
+                <button onclick="agregarProducto(2, 'Procesador Intel Core i7 14700kf LGA 1700 BX8071514700kf', 525)" class="btn btn-primary">Agregar Producto</button>
+                
+            </div>
             </div>
           </div>
         </div>
@@ -93,12 +116,16 @@
           <div class="card h-100 shadow p-3 mb-5 bg-body-tertiary rounded">
             <img src="https://http2.mlstatic.com/D_NQ_NP_818018-MLU74062996467_012024-O.webp"style="width: 300px; class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Procesador Intel Core i9-14900KF LGA 1700 de 36 MB a 3 GHz a 6 GHz </h5>
+              <h5 class="card-title">Procesador Intel Core i9-14900KF LGA 1700 de 36 MB a 3 GHz a 6 GHz</h5>
               <p class="card-text">Modelo i9-14900KF<br>
                 Producto de alto rendimiento y línea exclusiva para profesionales que ejecutan muchos programas al mismo tiempo.</p>
             </div>
             <div class="card-footer">
-              <small class="text-body-secondary">Last updated 3 mins ago</small>
+              <div id="productos">
+                        
+                <button onclick="agregarProducto(3, 'Procesador Intel Core i9-14900KF LGA 1700 de 36 MB a 3 GHz a 6 GHz', 687)" class="btn btn-primary">Agregar Producto</button>
+                
+            </div>
             </div>
           </div>
         </div>
@@ -113,7 +140,11 @@
                 Es ideal para jugadores y creadores de contenido que requieran un instrumento de gran ejecución.</p>
             </div>
             <div class="card-footer">
-              <small class="text-body-secondary">Last updated 3 mins ago</small>
+              <div id="productos">
+                        
+                <button onclick="agregarProducto(4, 'Procesador gamer AMD Ryzen 7 5700X 100-100000926WOF de 8 núcleos y 4.6GHz de frecuencia', 221)" class="btn btn-primary">Agregar Producto</button>
+                
+            </div>
             </div>
           </div>
         </div>
@@ -126,7 +157,11 @@
                 Es ideal para jugadores y creadores de contenido que requieran un instrumento de gran ejecución.</p>
             </div>
             <div class="card-footer">
-              <small class="text-body-secondary">Last updated 3 mins ago</small>
+              <div id="productos">
+                        
+                <button onclick="agregarProducto(5, 'Procesador gamer AMD Ryzen 3 3200G YD3200C5FHBOX de 4 núcleos y 4GHz de frecuencia con gráfica integrada', 73)" class="btn btn-primary">Agregar Producto</button>
+                
+            </div>
             </div>
           </div>
         </div>
@@ -139,7 +174,11 @@
                 Es ideal para jugadores y creadores de contenido que requieran un instrumento de gran ejecución.</p>
             </div>
             <div class="card-footer">
-              <small class="text-body-secondary">Last updated 3 mins ago</small>
+              <div id="productos">
+                        
+                <button onclick="agregarProducto(6, 'Procesador gamer AMD Ryzen 5 5600X 100-100000065BOX de 6 núcleos y 4.6GHz de frecuencia', 130)" class="btn btn-primary">Agregar Producto</button>
+                
+            </div>
             </div>
           </div>
         </div>
@@ -175,5 +214,6 @@
 
       
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
+    <script src="index.js"></script>
 </body>
 </html>
