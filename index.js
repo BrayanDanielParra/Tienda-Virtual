@@ -3,12 +3,11 @@
 
 let carrito = [];
 
-        // Cargar carrito desde localStorage al iniciar
         document.addEventListener('DOMContentLoaded', () => {
             const carritoGuardado = localStorage.getItem('carrito');
             if (carritoGuardado) {
                 carrito = JSON.parse(carritoGuardado);
-                console.log('Carrito cargado desde localStorage:', carrito); // Para verificar que se carga correctamente
+                console.log('Carrito cargado desde localStorage:', carrito); 
             }
             actualizarCarrito();
         });
@@ -84,5 +83,5 @@ let carrito = [];
 
         function guardarCarritoEnLocalStorage() {
             localStorage.setItem('carrito', JSON.stringify(carrito));
-            console.log('Carrito guardado en localStorage:', carrito); // Para verificar que se guarda correctamente
+            console.log('Carrito guardado en localStorage:', carrito); 
         }
